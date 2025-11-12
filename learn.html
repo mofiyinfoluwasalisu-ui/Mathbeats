@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-page="learn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MathBeats — Learn Terms</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 100 100" width="44" height="44" aria-hidden="true">
+        <circle cx="50" cy="50" r="45" fill="url(#g)"/>
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffcc70"/>
+            <stop offset="1" stop-color="#ff6b6b"/>
+          </linearGradient>
+        </defs>
+        <text x="50%" y="57%" text-anchor="middle" font-size="36" fill="#2b2b2b" font-family="Verdana">M</text>
+      </svg>
+      <h1>MathBeats</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="learn.html" class="nav-link">Learn Terms</a>
+      <a href="game.html" class="nav-link">Game</a>
+      <a href="rewards.html" class="nav-link">Rewards</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="learn-panel">
+      <h2>Learn Math Terms</h2>
+      <p>Choose a term to see a short explanation and example.</p>
+
+      <div class="term-controls">
+        <select id="term-select">
+          <option value="coefficient">Coefficient</option>
+          <option value="variable">Variable</option>
+          <option value="equation">Equation</option>
+          <option value="mean">Mean (Average)</option>
+          <option value="median">Median</option>
+        </select>
+        <button class="small" id="hear-term">Hear Example (Audio)</button>
+      </div>
+
+      <article class="term-card" id="term-card">
+        <h3 id="term-title">Coefficient</h3>
+        <p id="term-expl">A coefficient is a number that multiplies a variable. Example: in 3x, 3 is the coefficient.</p>
+        <div class="term-example" id="term-example">Example: 3x + 2 = 11 → coefficient 3 multiplies x</div>
+      </article>
+
+      <div class="fun-actions">
+        <button class="btn" id="quiz-from-term">Practice this term</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© MathBeats • Keep learning</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

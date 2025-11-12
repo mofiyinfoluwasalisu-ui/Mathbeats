@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-page="home">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MathBeats — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 100 100" width="44" height="44" aria-hidden="true">
+        <circle cx="50" cy="50" r="45" fill="url(#g)"/>
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffcc70"/>
+            <stop offset="1" stop-color="#ff6b6b"/>
+          </linearGradient>
+        </defs>
+        <text x="50%" y="57%" text-anchor="middle" font-size="36" fill="#2b2b2b" font-family="Verdana">M</text>
+      </svg>
+      <h1>MathBeats</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="learn.html" class="nav-link">Learn Terms</a>
+      <a href="game.html" class="nav-link">Game</a>
+      <a href="rewards.html" class="nav-link">Rewards</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Make math fun — play, earn, and groove 🎵</h2>
+      <p>Short lessons, mini quizzes, musical word problems, and badges to keep you motivated.</p>
+
+      <div class="cta-row">
+        <a class="btn" href="learn.html">Start Learning</a>
+        <a class="btn btn-ghost" href="game.html">Play Game</a>
+      </div>
+
+      <div class="cards">
+        <article class="card animate-card">
+          <h3>Quick Terms</h3>
+          <p>Short simple explanations with examples and visuals.</p>
+        </article>
+        <article class="card animate-card delay">
+          <h3>Mini Game</h3>
+          <p>Answer, earn points, unlock levels & get badges.</p>
+        </article>
+        <article class="card animate-card delay-2">
+          <h3>Music Mode</h3>
+          <p>Turn word problems into beats — hear math come alive.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="motivation">
+      <h3>Today's motivation</h3>
+      <blockquote id="motivational-quote">Loading...</blockquote>
+      <button class="small" id="new-quote">New quote</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© MathBeats • A learning project</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-page="game">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MathBeats — Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 100 100" width="44" height="44" aria-hidden="true">
+        <circle cx="50" cy="50" r="45" fill="url(#g)"/>
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#ffcc70"/>
+            <stop offset="1" stop-color="#ff6b6b"/>
+          </linearGradient>
+        </defs>
+        <text x="50%" y="57%" text-anchor="middle" font-size="36" fill="#2b2b2b" font-family="Verdana">M</text>
+      </svg>
+      <h1>MathBeats</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="learn.html" class="nav-link">Learn Terms</a>
+      <a href="game.html" class="nav-link">Game</a>
+      <a href="rewards.html" class="nav-link">Rewards</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="game-panel">
+      <h2>Mini Game</h2>
+      <div class="scoreboard">
+        <div>Points: <span id="points">0</span></div>
+        <div>Level: <span id="level">1</span></div>
+        <div>Streak: <span id="streak">0</span></div>
+      </div>
+
+      <div class="question-area" id="question-area">
+        <h3 id="question-text">Loading question...</h3>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div class="game-actions">
+        <button class="btn" id="new-question">New Question</button>
+        <button class="btn btn-ghost" id="music-mode">Music Mode (Word Problem → Melody)</button>
+      </div>
+
+      <div id="music-control" class="music-control hidden">
+        <label>Enter numbers or a short word problem:</label>
+        <input id="music-input" placeholder="e.g., 3 apples, 2 oranges → 5" />
+        <button class="small" id="play-music">Play Melody</button>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© MathBeats • Gamify learning</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

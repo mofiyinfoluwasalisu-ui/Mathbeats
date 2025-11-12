@@ -1,0 +1,86 @@
+:root{
+  --bg1: #0f172a;
+  --accent1: #7dd3fc;
+  --accent2: #60a5fa;
+  --card: rgba(255,255,255,0.06);
+  --glass: rgba(255,255,255,0.04);
+  --muted: #cbd5e1;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Poppins',sans-serif;background:
+linear-gradient(180deg,#041C3D 0%, #06243B 50%, #0b2a53 100%);color:#e6eef8}
+
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;padding:12px 20px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  position:sticky;top:0;z-index:10;
+}
+
+.logo{display:flex;align-items:center;gap:10px}
+.logo h1{font-size:18px;margin:0;color:white;letter-spacing:0.6px}
+
+.main-nav{display:flex;gap:8px}
+.nav-link{
+  color:var(--muted); text-decoration:none; padding:8px 12px;border-radius:8px;transition:all .22s;
+  font-weight:600;font-size:14px;
+}
+.nav-link:hover{background:var(--glass); color:white; transform:translateY(-2px)}
+.nav-link.active{background:linear-gradient(90deg,var(--accent1),var(--accent2)); color:#052742; box-shadow:0 6px 18px rgba(0,0,0,0.35)}
+
+.container{max-width:980px;margin:28px auto;padding:0 18px}
+
+.hero{padding:20px;text-align:center}
+.hero h2{font-size:28px;margin:8px 0 6px}
+.hero p{color: #cfe7ff;margin:0 0 12px}
+
+.cta-row{display:flex;gap:12px;justify-content:center;margin:12px 0}
+.btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));border:none;color:#052742;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;cursor:pointer;box-shadow:0 8px 30px rgba(96,165,250,0.12)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.small{padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,#fff,#fff);color:#052742;border:none;cursor:pointer}
+
+.cards{display:flex;gap:14px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.card{width:220px;padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));box-shadow:0 6px 20px rgba(3,7,18,0.6);border:1px solid rgba(255,255,255,0.03);transform:translateY(0)}
+.card h3{margin:0 0 8px}
+.card p{margin:0;color: #cfe7ff}
+
+.animate-card{animation:float 3s ease-in-out infinite}
+.animate-card.delay{animation-delay:.2s}
+.animate-card.delay-2{animation-delay:.4s}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+.motivation{margin-top:26px;background:var(--card);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+blockquote{font-style:italic;color:#eaf6ff;margin:8px 0}
+
+.learn-panel,.game-panel,.rewards-panel{padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; border:1px solid rgba(255,255,255,0.03)}
+.term-card{margin-top:12px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03)}
+
+.term-controls{display:flex;gap:8px;align-items:center}
+.term-controls select{padding:8px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:white}
+
+.scoreboard{display:flex;gap:12px;justify-content:flex-start;margin:12px 0}
+.question-area{background:var(--glass);padding:14px;border-radius:10px}
+.choices{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.choice{padding:10px;border-radius:8px;cursor:pointer;border:1px solid rgba(255,255,255,0.03);background:transparent}
+.choice:hover{transform:translateX(6px);background:rgba(255,255,255,0.02)}
+
+.game-actions{margin-top:12px;display:flex;gap:8px}
+
+.music-control{margin-top:12px;display:flex;gap:8px;align-items:center}
+.hidden{display:none}
+
+.badges-grid{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.badge{width:140px;height:90px;padding:12px;border-radius:12px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.03)}
+.badge.locked{opacity:.35;filter:grayscale(.4)}
+.badge .title{font-weight:700;margin-top:6px;color:#fff}
+
+.site-footer{text-align:center;padding:18px 8px;color:#9fb3d6;margin-top:24px}
+
+/* responsive */
+@media (max-width:760px){
+  .cards{flex-direction:column;align-items:center}
+  .main-nav{gap:6px}
+  .scoreboard{flex-direction:column;gap:6px}
+}
